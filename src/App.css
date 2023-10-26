@@ -1,0 +1,374 @@
+.myCard {
+  
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+}
+.alert{
+  position: absolute;
+  width: 100%;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tn{
+  margin-top: 80px;
+ margin-bottom: 40px;
+  color: #2cbc2c;
+}
+body{
+  margin: 0px 0px;
+  width: 100vw;
+}
+.dd{
+  width: 90%;
+  word-wrap: break-word;
+}
+.title {
+  width: 90%;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.innerCard {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+
+.frontSide,
+.backSide {
+  
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.frontSide {
+  background: linear-gradient(43deg, rgb(29 151 125) 0%, #198754 46%, rgb(85 155 31) 99%);
+}
+
+.backSide {
+  background-image: linear-gradient(160deg, #4dd680 0%, #50df51 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+.button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(69, 255, 131);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 30px;
+  transition-duration: .3s;
+}
+
+
+.button:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(69, 255, 131);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 0px;
+  transition-duration: .1s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -25px;
+  align-items: center;
+  justify-content: center;
+  content: "Edit";
+  color: white;
+  transition-duration: .3s;
+  font-size: 10px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+.sbutton {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(255, 94, 69);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 23px;
+  transition-duration: .3s;
+}
+
+
+.sbutton:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 97, 69);
+  align-items: center;
+}
+
+.sbutton:hover .svgIcon {
+  width: 0px;
+  transition-duration: .1s;
+  transform: translateY(60%);
+}
+
+.sbutton::before {
+  position: absolute;
+  top: -25px;
+  align-items: center;
+  justify-content: center;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 10px;
+}
+
+.sbutton:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+/* scascascasc */
+
+.con{
+  display: flex;
+  
+}
+.m{
+  margin-left: auto;
+}
+.abutton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(69, 255, 131);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.tt{
+  color: white;
+  
+}
+.asvgIcon {
+  width: 20px;
+  transition-duration: .3s;
+}
+
+
+.abutton:hover {
+  
+  width: 190px;
+  border-radius: 70px;
+  transition-duration: .3s;
+  background-color:  rgb(69, 255, 131);
+  
+}
+
+.abutton:hover .asvgIcon {
+  width: 0px;
+  transition-duration: .1s;
+  transform: translateY(60%);
+}
+
+
+.abutton::before {
+  position: absolute;
+  top: -14px;
+  
+  content: "ADD";
+  color: white;
+  transition-duration: .3s;
+  font-size: 0px;
+}
+
+.abutton:hover::before {
+  font-size: 25px;
+  opacity: 1;
+  transform: translateY(20px);
+  transition-duration: .3s;
+}
+body {
+  overflow-x: hidden; /* Hide scrollbars */
+}
+.lll{
+  color: #198754;
+  margin-top: 30px;
+}
+.lls{
+  color: #198754;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.lform {
+    margin-bottom: 40px;
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #58BC82;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: min(50%,450px);
+}
+
+.form .input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+form input[type="email"],form input[type="text"],
+form input[type="password"] {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus,form input[type="text"]:focus {
+  outline: 2px solid var(--clr);
+}
+
+.label {
+  align-self: flex-start;
+  color: var(--clr);
+  font-weight: 600;
+}
+form .submit {
+  text-align: center;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+form .submit:hover {
+  background-color: #198754;
+  color: rgb(69, 255, 131);
+}
+
+.span {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.span a {
+  color: var(--clr);
+}
+
+
+.mlogin{
+  margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nna{
+  color:#198754;
+}
